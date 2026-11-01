@@ -15,7 +15,7 @@ export default function App() {
   return (
     <View style={{ backgroundColor: colors.background, flex: 1 }}>
       {selectedMovie
-        ? <MovieDetails movie={selectedMovie} />
+        ? <MovieDetails movie={selectedMovie} onBack={() => setSelectedMovie(null)} />
         : <MovieList movies={data.movies} onSelect={selectMovieHandler} />
       }
 
